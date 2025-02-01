@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     class="d-flex justify-center align-center flex-column"
-    height="100vh"
+    height="90vh"
     width="100vw"
     color="primary"
   >
@@ -15,7 +15,13 @@
         :label="disabled"
         required
         variant="outlined"
-      ></v-text-field>
+        >🔭 I’m currently working on <br />
+        👯 I’m looking to collaborate on <br />
+        🤝 I’mlooking for help with <br />
+        🌱 I’m currently learning <br />
+        💬 Ask me about <br />
+        ⚡ Funfact</v-text-field
+      >
       <v-btn @click="Prev">Prev</v-btn>
       <v-btn @click="Next">Next</v-btn>
     </div>

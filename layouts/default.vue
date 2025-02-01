@@ -4,14 +4,7 @@ import { NuxtPage } from "#components";
 
 <template>
   <v-app>
-    <v-sheet
-      class="d-flex justify-center align-center flex-column"
-      height="100vh"
-      width="100vw"
-      color="primary"
-    >
-      <NuxtPage />
-    </v-sheet>
-    <!-- .... -->
+    <navbar />
+    <NuxtPage />
   </v-app>
 </template>

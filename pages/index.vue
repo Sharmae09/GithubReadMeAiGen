@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     class="d-flex align-center justify-center"
-    height="100vh"
+    height="90vh"
     width="100vw"
     color="primary"
   >
@@ -92,6 +92,7 @@ const getStarted = () => {
 }
 
 .aurora-text {
+  line-height: 3rem;
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;

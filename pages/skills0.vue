@@ -165,8 +165,7 @@
   </v-sheet>
 </template>
 <script setup>
-import { useRouter } from "vue-router";
-import { ref } from "vue";
+
 
 const programmingLanguages = [
   "JavaScript",
@@ -293,7 +292,8 @@ const searchQuery = ref("");
 const performSearch = () => {
   console.log("Searching for:", searchQuery.value);
 };
-
+import { useRouter } from "vue-router";
+import { ref } from "vue";
 const router = useRouter();
 
 const Next = () => {
