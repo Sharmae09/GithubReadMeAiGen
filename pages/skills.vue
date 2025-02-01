@@ -5,8 +5,9 @@
     <div>
       <v-container>
         <h2>Fill the Blanks</h2>
+        <!-- v-model="searchQuery" -->
+
         <v-text-field
-          v-model="searchQuery"
           label="Search tech"
           variant="outlined"
           clearable
@@ -24,15 +25,22 @@
             :key="index"
             cols="auto"
           >
-            <v-chip v-model="selectedChips" @click="handleChipClick(language)">
+            <v-btn
+              @click="toggleChip(language)"
+              :color="
+                selectedChips.includes(language) ? 'green' : 'grey-lighten-3'
+              "
+              class="ma-2"
+              variant="flat"
+              rounded
+            >
               {{ language }}
-              <p>|</p>
-              <v-icon icon="	mdi-check" end></v-icon>
-            </v-chip>
-            <v-btn v-if="!chip" color="primary" @click="chip = true">
-              {{ language }}
-              <p>|</p>
-              <v-icon icon="	mdi-close" end></v-icon>
+              <v-icon
+                :icon="
+                  selectedChips.includes(language) ? 'mdi-close' : 'mdi-check'
+                "
+                end
+              ></v-icon>
             </v-btn>
           </v-col>
         </v-row>
@@ -265,6 +273,16 @@ const Prev = () => {
 // Handle chip click logic
 const handleChipClick = (tech) => {
   console.log(`${tech} clicked`);
+};
+
+const toggleChip = (language) => {
+  if (selectedChips.value.includes(language)) {
+    selectedChips.value = selectedChips.value.filter(
+      (item) => item !== language
+    );
+  } else {
+    selectedChips.value.push(language);
+  }
 };
 
 // Handle search logic
