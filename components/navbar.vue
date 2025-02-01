@@ -14,7 +14,7 @@
   position: relative;
   background: linear-gradient(
     45deg,
-    rgba(255, 0, 149, 0.858),
+    rgba(111, 0, 255, 0.858),
     rgba(0, 255, 255, 0.858),
     rgba(0, 255, 123, 0.858),
     rgba(255, 255, 0, 0.858)
