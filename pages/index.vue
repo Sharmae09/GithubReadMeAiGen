@@ -32,7 +32,7 @@
           variant="outlined"
           max-width="300px"
         ></v-text-field>
-        <v-btn rounded @click="getStarted" variant="outlined"
+        <v-btn color="orange" rounded @click="getStarted" variant="outlined"
           >Get Started</v-btn
         >
       </v-container>
@@ -77,7 +77,7 @@ const getStarted = () => {
   top: 0;
   left: 0;
   border-radius: 12px;
-  padding: 10px; /* Expands the glow outside the card */
+  padding: 0.1rem; /* Expands the glow outside the card */
   background: linear-gradient(
     45deg,
     rgba(255, 0, 150, 0.6),
@@ -85,7 +85,7 @@ const getStarted = () => {
     rgba(0, 255, 0, 0.6),
     rgba(255, 255, 0, 0.6)
   );
-  background-size: 400% 400%;
+  background-size: 370% 370%;
   animation: aurora-glow 60s infinite linear;
   filter: blur(25px);
   z-index: 0;
