@@ -5,3 +5,6 @@
     </v-app>
   </NuxtLayout>
 </template>
+<script >
+
+</script>
