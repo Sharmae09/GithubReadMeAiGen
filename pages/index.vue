@@ -18,11 +18,11 @@
       </div>
       <v-container>
         <h1 class="aurora-text">Github Profile AI Generator</h1>
-        <h3>
+        <v-text>
           Let people know how amazing you are. <br />
           Showcase your skill and project <br />
           Enter your github Username.
-        </h3>
+        </v-text>
         <v-text-field
           class="pt-4"
           v-model="firstname"
