@@ -1,5 +1,5 @@
 <template>
-  <v-sheet width="100vw" color="primary" style="min-height: 100vh">
+  <v-sheet class="pt-8" width="100vw" color="primary" style="min-height: 100vh">
     <div class="d-flex justify-center align-center flex-column">
       <div>
         <h1>Socials</h1>
@@ -19,6 +19,7 @@
                 :placeholder="`Enter your ${social.name} Username`"
                 variant="underlined"
                 :prepend-outer-icon="social.icon"
+                color="secondary"
               >
               </v-text-field>
               <v-icon :icon="social.icon" end></v-icon>
@@ -52,7 +53,6 @@ const socialMedias = ref([
   { name: "Behance", icon: "mdi-behance" },
   { name: "Medium", icon: "mdi-medium" },
   { name: "Quora", icon: "mdi-quora" },
-  { name: "Medium", icon: "mdi-medium" },
   { name: "Facebook", icon: "mdi-facebook" },
   { name: "Twitter", icon: "mdi-twitter" },
   { name: "Instagram", icon: "mdi-instagram" },
@@ -62,7 +62,6 @@ const socialMedias = ref([
   { name: "TikTok", icon: "mdi-tiktok" },
   { name: "Reddit", icon: "mdi-reddit" },
   { name: "Stackoverflow", icon: "mdi-stackoverflow" },
-  { name: "Pinterest", icon: "mdi-pinterest" },
   { name: "Twitch", icon: "mdi-twitch" },
   { name: "Discord", icon: "mdi-discord" },
 ]);
