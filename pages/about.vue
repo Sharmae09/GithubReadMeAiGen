@@ -1,15 +1,17 @@
 <template>
   <v-sheet
-    class="d-flex justify-center align-center flex-column"
+    class="d-flex justify-center align-center flex-column pt-8"
     height="90vh"
     width="100vw"
     color="primary"
   >
-    <h1 class="text-center" style="color: #fec5fb">ABOUT ME</h1>
+    <h1 class="text-center" style="color: #0ae448">ABOUT ME</h1>
 
     <div>
-      <v-container class="d-flex justify-center align-center">
-        <h2>Tell us a bit about yourself</h2>
+      <v-container class="d-flex justify-center align-center pt-0">
+        <v-text class="pt-0 mt-0" color="secondary" style="color: #0ae448">
+          Tell us a bit about yourself!
+        </v-text>
 
         <div class="light-bulb-wrapper">
           <v-btn
@@ -42,9 +44,11 @@
           auto-grow
         ></v-textarea>
       </div>
-      <v-container>
-        <v-btn @click="Prev">Prev</v-btn>
-        <v-btn @click="Next">Next</v-btn>
+      <v-container class="pl-0">
+        <v-btn class="mr-2" variant="outlined" @click="Prev" color="secondary"
+          >Prev</v-btn
+        >
+        <v-btn variant="outlined" @click="Next" color="secondary">Next</v-btn>
       </v-container>
     </div>
   </v-sheet>
@@ -106,7 +110,7 @@ const toggleLight = () => {
 .aurora-vtext {
   position: relative;
   background: rgba(0, 0, 0, 0.8); /* Dark background to stand out */
-  border: 2px solid rgba(255, 166, 0, 0.676); /* Light border for contrast */
+  border: 2px solid #0ae448; /* Light border for contrast */
   color: white;
   border-radius: 12px;
   width: 100%;
