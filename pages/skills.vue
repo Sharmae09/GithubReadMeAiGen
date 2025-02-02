@@ -1,10 +1,10 @@
 <template>
-  <v-sheet width="100vw" color="primary" style="min-height: 100vh">
-    <h1 class="text-center" style="color: #7ef89e">Skills</h1>
+  <v-sheet class="pt-8" width="100vw" color="primary" style="min-height: 100vh">
+    <h1 class="text-center" style="color: #7ef89e">SKILLS & TECH STACK</h1>
 
     <div>
       <v-container>
-        <h2>Fill the Blanks</h2>
+        <v-text>Fill the Blanks</v-text>
         <!-- v-model="searchQuery" -->
 
         <v-text-field
