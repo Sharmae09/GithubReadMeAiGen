@@ -1,6 +1,6 @@
 <template>
   <v-sheet width="100vw" color="primary" style="min-height: 100vh">
-    <h1 class="text-center">Skills</h1>
+    <h1 class="text-center" style="color: #7ef89e">Skills</h1>
 
     <div>
       <v-container>
