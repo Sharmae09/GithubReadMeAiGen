@@ -8,7 +8,7 @@
     <v-container class="d-flex" max-width="90vw">
       <div class="aurora-card-wrapper mr-8">
         <v-card
-          width="40vw"
+          width="53vw"
           height="70vh"
           variant="outlined"
           color="white"
@@ -80,14 +80,13 @@ const getStarted = () => {
   padding: 0.1rem; /* Expands the glow outside the card */
   background: linear-gradient(
     45deg,
-    rgba(255, 0, 150, 0.6),
     rgba(0, 255, 255, 0.6),
     rgba(0, 255, 0, 0.6),
     rgba(255, 255, 0, 0.6)
   );
   background-size: 370% 370%;
   animation: aurora-glow 60s infinite linear;
-  filter: blur(25px);
+  filter: blur(1rem);
   z-index: 0;
 }
 
@@ -96,7 +95,7 @@ const getStarted = () => {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #ff00ff, #00ffff, #ffcc00, #ff00ff);
+  background: linear-gradient(90deg, #ff7300, #ff0077, #ffcc00, #ffbf00);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
