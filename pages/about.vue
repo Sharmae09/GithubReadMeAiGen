@@ -6,27 +6,27 @@
     color="primary"
   >
     <h1 class="text-center" style="color: #0ae448">ABOUT ME</h1>
+    <v-container class="d-flex justify-center align-center pt-0">
+      <div class="light-bulb-wrapper">
+        <v-btn
+          class="light-bulb"
+          :class="{ on: isOn }"
+          @click="toggleLight"
+          icon
+          size="small"
+          elevation="10"
+        >
+          <v-icon size="30" :color="isOn ? 'yellow' : 'grey-darken-2'">
+            {{ isOn ? "mdi-lightbulb-on" : "mdi-lightbulb-off" }}
+          </v-icon>
+        </v-btn>
+      </div>
+      <p class="pt-0 mt-0" color="secondary" style="color: #0ae448">
+        Tell us a bit about yourself!
+      </p>
+    </v-container>
 
     <div>
-      <v-container class="d-flex justify-center align-center pt-0">
-        <div class="light-bulb-wrapper">
-          <v-btn
-            class="light-bulb"
-            :class="{ on: isOn }"
-            @click="toggleLight"
-            icon
-            size="small"
-            elevation="10"
-          >
-            <v-icon size="30" :color="isOn ? 'yellow' : 'grey-darken-2'">
-              {{ isOn ? "mdi-lightbulb-on" : "mdi-lightbulb-off" }}
-            </v-icon>
-          </v-btn>
-        </div>
-        <v-text class="pt-0 mt-0" color="secondary" style="color: #0ae448">
-          Tell us a bit about yourself!
-        </v-text>
-      </v-container>
       <div class="aurora-card-wrapper">
         <v-textarea
           class="aurora-vtext"
