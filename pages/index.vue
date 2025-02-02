@@ -33,7 +33,7 @@
           max-width="300px"
         ></v-text-field>
         <v-btn color="orange" rounded @click="getStarted" variant="outlined"
-          >Get Started</v-btn
+          >Enter Username</v-btn
         >
       </v-container>
     </v-container>
