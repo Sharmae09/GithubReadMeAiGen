@@ -1,8 +1,8 @@
 <template>
-  <v-sheet class="aurora-nav" width="100vw" height="7vh">
-    <v-container class="d-flex align-center justify-space-between h-100">
-      <h3 class="navbar-title text-black text-bold">Profile Generator</h3>
-    </v-container>
+  <v-sheet class="aurora-nav d-flex align-center" width="100vw" height="7vh">
+    <!-- <v-container class=""> -->
+    <h3 class="navbar-title text-black">Profile Generator</h3>
+    <!-- </v-container> -->
   </v-sheet>
 </template>
 
@@ -14,7 +14,7 @@
   position: relative;
   background: linear-gradient(
     45deg,
-    rgba(111, 0, 255, 0.858),
+    rgba(102, 255, 0, 0.858),
     rgba(0, 255, 255, 0.858),
     rgba(0, 255, 123, 0.858),
     rgba(255, 255, 0, 0.858)
@@ -41,6 +41,7 @@
 
 /* Navbar title */
 .navbar-title {
+  padding: 0 5rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
