@@ -9,10 +9,6 @@
 
     <div>
       <v-container class="d-flex justify-center align-center pt-0">
-        <v-text class="pt-0 mt-0" color="secondary" style="color: #0ae448">
-          Tell us a bit about yourself!
-        </v-text>
-
         <div class="light-bulb-wrapper">
           <v-btn
             class="light-bulb"
@@ -27,6 +23,9 @@
             </v-icon>
           </v-btn>
         </div>
+        <v-text class="pt-0 mt-0" color="secondary" style="color: #0ae448">
+          Tell us a bit about yourself!
+        </v-text>
       </v-container>
       <div class="aurora-card-wrapper">
         <v-textarea
@@ -35,12 +34,7 @@
           variant="outlined"
           required
           no-resize
-          :placeholder="`🔭 I’m currently working on 
-👯 I’m looking to collaborate on 
-🤝 I’m looking for help with 
-🌱 I’m currently learning 
-💬 Ask me about 
-⚡ Fun fact`"
+          :placeholder="placeholder"
           auto-grow
         ></v-textarea>
       </div>
@@ -65,7 +59,8 @@ const Next = () => {
 const Prev = () => {
   router.push("/");
 };
-
+const placeholder =
+  "🔭 I’m currently working on \n👯 I’m looking to collaborate on \n🤝 I’m looking for help with \n🌱 I’m currently learning \n💬 Ask me about \n⚡ Fun fact";
 // Light bulb code
 const isOn = ref(false);
 
