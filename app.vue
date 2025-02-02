@@ -5,6 +5,7 @@
     </v-app>
   </NuxtLayout>
 </template>
-<script >
-
-</script>
+<script setup></script>
+<style>
+/* @import "@/assets/styles/settings.scss"; */
+</style>
