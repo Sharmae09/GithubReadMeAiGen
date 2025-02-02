@@ -1,36 +1,42 @@
 <template>
   <v-sheet class="pt-8" width="100vw" color="primary" style="min-height: 100vh">
-    <h1 class="text-center" style="color: #7ef89e">SKILLS & TECH STACK</h1>
+    <h1 class="text-center" style="color: secondary">SKILLS & TECH STACK</h1>
 
     <div>
-      <v-container>
-        <v-text>Fill the Blanks</v-text>
+      <v-container class="pb-0">
+        <p class="text-center" style="color: secondary">
+          Search and select technologies you work with
+        </p>
         <!-- v-model="searchQuery" -->
 
         <v-text-field
           label="Search tech"
           variant="outlined"
           clearable
-          prepend-inner-icon="mdi-magnify"
           class="search-bar"
           @keyup.enter="performSearch"
-        ></v-text-field>
+          color="secondary"
+        >
+          <template v-slot:prepend-inner>
+            <v-icon color="secondary">mdi-magnify</v-icon>
+          </template>
+        </v-text-field>
       </v-container>
       <!-- Languages Section -->
-      <v-container>
-        <h2>Languages</h2>
+      <v-container class="pt-0">
+        <h2 class="mb-2 underlined" style="color: secondary">Languages</h2>
         <v-row>
           <v-col
             v-for="(language, index) in programmingLanguages"
             :key="index"
             cols="auto"
+            class="m-0 p-0"
+            style="padding: 0; margin: 0.5rem 0"
           >
             <v-btn
               @click="toggleChip(language)"
-              :color="
-                selectedChips.includes(language) ? 'green' : 'grey-lighten-3'
-              "
-              class="ma-2"
+              :color="selectedChips.includes(language) ? 'tertiary' : 'four'"
+              class="m-0"
               variant="flat"
               rounded
             >
@@ -48,79 +54,123 @@
 
       <!-- Hosting SaaS Section -->
       <v-container>
-        <h2>Hosting SaaS</h2>
-
+        <h2 class="mb-2 underlined" style="color: secondary">Hosting/SaaS</h2>
         <v-row>
           <v-col
             v-for="(tech, index) in hostingSaaSProviders"
             :key="index"
             cols="auto"
+            class="m-0 p-0"
+            style="padding: 0; margin: 0.5rem 0"
           >
-            <v-chip
-              v-model="selectedChips"
-              closable
-              @click="handleChipClick(tech)"
+            <v-btn
+              @click="toggleChip(tech)"
+              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              class="m-0"
+              variant="flat"
+              rounded
             >
-              {{ tech }} |
-            </v-chip>
+              {{ tech }}
+              <v-icon
+                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                end
+              ></v-icon>
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
+      <!-- !! -->
 
       <!-- Frameworks, Platforms & Libraries Section -->
       <v-container>
-        <h2>Frameworks, Platforms & Libraries</h2>
-
+        <h2 class="mb-2 underlined" style="color: secondary">
+          Frameworks, Platforms & Libraries
+        </h2>
         <v-row>
           <v-col
             v-for="(tech, index) in frameworksPlatformsLibraries"
             :key="index"
             cols="auto"
+            class="m-0 p-0"
+            style="padding: 0; margin: 0.5rem 0"
           >
-            <v-chip
-              v-model="selectedChips"
-              closable
-              @click="handleChipClick(tech)"
+            <v-btn
+              @click="toggleChip(tech)"
+              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              class="m-0"
+              variant="flat"
+              rounded
             >
               {{ tech }}
-            </v-chip>
+              <v-icon
+                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                end
+              ></v-icon>
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
+      <!-- !! -->
 
       <!-- Servers Section -->
       <v-container>
-        <h2>Servers</h2>
-
+        <h2 class="mb-2 underlined" style="color: secondary">Servers</h2>
         <v-row>
-          <v-col v-for="(tech, index) in servers" :key="index" cols="auto">
-            <v-chip
-              v-model="selectedChips"
-              closable
-              @click="handleChipClick(tech)"
+          <v-col
+            v-for="(tech, index) in servers"
+            :key="index"
+            cols="auto"
+            class="m-0 p-0"
+            style="padding: 0; margin: 0.5rem 0"
+          >
+            <v-btn
+              @click="toggleChip(tech)"
+              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              class="m-0"
+              variant="flat"
+              rounded
             >
               {{ tech }}
-            </v-chip>
+              <v-icon
+                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                end
+              ></v-icon>
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
+      <!-- !! -->
 
       <!-- Databases / ORM Section -->
       <v-container>
-        <h2>Databases / ORM</h2>
-
+        <h2 class="mb-2 underlined" style="color: secondary">
+          Databases / ORM
+        </h2>
         <v-row>
-          <v-col v-for="(tech, index) in databases" :key="index" cols="auto">
-            <v-chip
-              v-model="selectedChips"
-              closable
-              @click="handleChipClick(tech)"
+          <v-col
+            v-for="(tech, index) in databases"
+            :key="index"
+            cols="auto"
+            class="m-0 p-0"
+            style="padding: 0; margin: 0.5rem 0"
+          >
+            <v-btn
+              @click="toggleChip(tech)"
+              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              class="m-0"
+              variant="flat"
+              rounded
             >
               {{ tech }}
-            </v-chip>
+              <v-icon
+                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                end
+              ></v-icon>
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
+      <!-- !! -->
 
       <!-- Navigation Buttons -->
       <v-container>
@@ -298,5 +348,13 @@ const performSearch = () => {
 }
 .v-container {
   overflow: auto; /* Allows scrolling if content overflows */
+}
+h2 {
+  display: inline-block;
+  border-bottom: 3px solid tertiary; /* Uses Vuetify theme color */
+  padding-bottom: 5px;
+}
+h1 {
+  color: secondary;
 }
 </style>
