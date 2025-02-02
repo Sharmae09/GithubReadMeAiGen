@@ -22,6 +22,12 @@ export default defineNuxtPlugin((app) => {
       },
     },
     defaults: {
+      VBtn: {
+        color: "secondary", // ✅ Set default text field color to secondary
+        variant: "outlined", // (Optional) Set a default variant
+        rounded: "lg",
+        class: "mr-4",
+      },
       global: {
         style: {
           fontFamily: "Roboto, sans-serif",
