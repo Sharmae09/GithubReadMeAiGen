@@ -5,7 +5,6 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 
 export default defineNuxtPlugin((app) => {
-  
   const vuetify = createVuetify({
     theme: {
       defaultTheme: "dark",
@@ -13,11 +12,11 @@ export default defineNuxtPlugin((app) => {
         dark: {
           colors: {
             primary: "#0e100f",
-            secondary: "#3D087B",
-            tertiary: "#090088",
-            accent: "#F43B86",
+            secondary: "#0ae448",
+            tertiary: "##abff84",
+            accent: "##c9f6b4",
             four: "#EEEEEE",
-            five: "#FFBD39",
+            five: "##7ef89e",
           },
         },
       },
@@ -26,12 +25,10 @@ export default defineNuxtPlugin((app) => {
       global: {
         style: {
           fontFamily: "Roboto, sans-serif",
-          
         },
       },
     },
   });
 
-  
   app.vueApp.use(vuetify);
 });
