@@ -1,7 +1,7 @@
 <template>
-  <v-sheet width="90vw" color="primary" style="min-height: 100vh">
+  <v-sheet width="100vw" color="primary" style="min-height: 90vh">
     <div class="d-flex justify-center align-center flex-column">
-      <v-container>
+      <v-container width="1000">
         <v-btn @click="Prev">Prev</v-btn>
         <v-btn @click="Next">Download</v-btn>
         <v-btn @click="copyText">
@@ -14,7 +14,7 @@
         </v-snackbar>
       </v-container>
       <!-- <v-container > -->
-      <div class="aurora-card-wrapper" max-width="90vw">
+      <div class="aurora-card-wrapper" width="90vw">
         <v-card
           width="80vw"
           height="70vh"
