@@ -13,10 +13,10 @@ export default defineNuxtPlugin((app) => {
           colors: {
             primary: "#0e100f",
             secondary: "#0ae448",
-            tertiary: "##abff84",
-            accent: "##c9f6b4",
+            tertiary: "#abff84",
+            accent: "#c9f6b4",
             four: "#EEEEEE",
-            five: "##7ef89e",
+            five: "#7ef89e",
           },
         },
       },
