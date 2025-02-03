@@ -190,7 +190,7 @@ const router = useRouter();
 
 // Define reactive state
 const searchQuery = ref("");
-const selectedChips = ref([]);
+const selectedChips = useState("selectedSkills", () => []);
 const programmingLanguages = ref([
   "JavaScript",
   "Python",
