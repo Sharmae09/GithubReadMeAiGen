@@ -1,7 +1,7 @@
 <template>
   <v-sheet width="100vw" color="primary" style="min-height: 90vh">
     <div class="d-flex justify-center align-center flex-column">
-      <v-container width="1000">
+      <v-container width="90vw">
         <v-btn @click="Prev">Prev</v-btn>
         <v-btn @click="Next">Download</v-btn>
         <v-btn @click="copyText">
@@ -10,7 +10,7 @@
         </v-btn>
 
         <v-snackbar v-model="snackbar" timeout="2000">
-          Text copied!
+          Code copied!
         </v-snackbar>
       </v-container>
       <!-- <v-container > -->
@@ -29,6 +29,7 @@
             color="white"
             height="60"
             slider-color="#f78166"
+            class="d-flex justify-center"
           >
             <template v-slot:tab="{ item }">
               <v-tab
@@ -90,12 +91,12 @@ const tabs = ref([
   },
   {
     icon: "mdi-handshake-outline",
-    text: "Readme",
+    text: "Code",
     value: "tab-2",
   },
   {
     icon: "mdi-license",
-    text: "Edit Readme",
+    text: "Edit Code",
     value: "tab-3",
   },
 ]);
