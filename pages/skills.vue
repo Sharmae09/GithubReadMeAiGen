@@ -35,7 +35,7 @@
           >
             <v-btn
               @click="toggleChip(language)"
-              :color="selectedChips.includes(language) ? 'tertiary' : 'four'"
+              :color="techstack.includes(language) ? 'tertiary' : 'four'"
               class="m-0"
               variant="flat"
               rounded
@@ -43,7 +43,7 @@
               {{ language }}
               <v-icon
                 :icon="
-                  selectedChips.includes(language) ? 'mdi-close' : 'mdi-check'
+                  techstack.includes(language) ? 'mdi-close' : 'mdi-check'
                 "
                 end
               ></v-icon>
@@ -65,14 +65,14 @@
           >
             <v-btn
               @click="toggleChip(tech)"
-              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              :color="techstack.includes(tech) ? 'tertiary' : 'four'"
               class="m-0"
               variant="flat"
               rounded
             >
               {{ tech }}
               <v-icon
-                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                :icon="techstack.includes(tech) ? 'mdi-close' : 'mdi-check'"
                 end
               ></v-icon>
             </v-btn>
@@ -96,14 +96,14 @@
           >
             <v-btn
               @click="toggleChip(tech)"
-              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              :color="techstack.includes(tech) ? 'tertiary' : 'four'"
               class="m-0"
               variant="flat"
               rounded
             >
               {{ tech }}
               <v-icon
-                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                :icon="techstack.includes(tech) ? 'mdi-close' : 'mdi-check'"
                 end
               ></v-icon>
             </v-btn>
@@ -125,14 +125,14 @@
           >
             <v-btn
               @click="toggleChip(tech)"
-              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              :color="techstack.includes(tech) ? 'tertiary' : 'four'"
               class="m-0"
               variant="flat"
               rounded
             >
               {{ tech }}
               <v-icon
-                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                :icon="techstack.includes(tech) ? 'mdi-close' : 'mdi-check'"
                 end
               ></v-icon>
             </v-btn>
@@ -156,14 +156,14 @@
           >
             <v-btn
               @click="toggleChip(tech)"
-              :color="selectedChips.includes(tech) ? 'tertiary' : 'four'"
+              :color="techstack.includes(tech) ? 'tertiary' : 'four'"
               class="m-0"
               variant="flat"
               rounded
             >
               {{ tech }}
               <v-icon
-                :icon="selectedChips.includes(tech) ? 'mdi-close' : 'mdi-check'"
+                :icon="techstack.includes(tech) ? 'mdi-close' : 'mdi-check'"
                 end
               ></v-icon>
             </v-btn>
@@ -190,7 +190,7 @@ const router = useRouter();
 
 // Define reactive state
 const searchQuery = ref("");
-const selectedChips = useState("selectedSkills", () => []);
+const techstack = useState("selectedSkills", () => []);
 const programmingLanguages = ref([
   "JavaScript",
   "Python",
@@ -326,12 +326,12 @@ const handleChipClick = (tech) => {
 };
 
 const toggleChip = (language) => {
-  if (selectedChips.value.includes(language)) {
-    selectedChips.value = selectedChips.value.filter(
+  if (techstack.value.includes(language)) {
+    techstack.value = techstack.value.filter(
       (item) => item !== language
     );
   } else {
-    selectedChips.value.push(language);
+    techstack.value.push(language);
   }
 };
 
