@@ -62,7 +62,11 @@ const username = useState("username", () => "");
 
 // Handle form submission
 const getStarted = () => {
-  router.push("/about");
+  if (username.value.trim() !== "") {
+    router.push("/about");
+  } else {
+    alert("Username is required!"); // Temporary alert, replace with proper error handling
+  }
 };
 </script>
 
