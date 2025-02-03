@@ -25,14 +25,21 @@
         </v-text>
         <v-text-field
           class="pt-4"
-          v-model="firstname"
+          v-model="username"
           :rules="nameRules"
           label="https://github.com/username"
           required
           variant="outlined"
           max-width="300px"
+          color="secondary"
         ></v-text-field>
-        <v-btn color="orange" rounded @click="getStarted" variant="outlined"
+        <v-btn
+          class="mt-4"
+          color="orange"
+          rounded
+          size="large"
+          @click="getStarted"
+          variant="outlined"
           >Enter Username</v-btn
         >
       </v-container>
@@ -41,9 +48,17 @@
 </template>
 <script setup>
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 
 const router = useRouter();
+const username = ref("");
+const showAlertComponent = ref(false);
 
+const nameRules = [
+  (v) => !!v || "Username is required", // ensures username is not empty
+];
+
+// Handle form submission
 const getStarted = () => {
   router.push("/about");
 };
