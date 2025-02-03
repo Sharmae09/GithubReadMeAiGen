@@ -9,20 +9,20 @@
     <v-container class="d-flex justify-center align-center pt-0">
       <div class="light-bulb-wrapper">
         <v-btn
-          class="light-bulb"
+          class="light-bulb p-0"
           :class="{ on: isOn }"
           @click="toggleLight"
           icon
-          size="small"
+          density="compact"
           elevation="10"
         >
-          <v-icon size="30" :color="isOn ? 'yellow' : 'grey-darken-2'">
+          <v-icon size="20" :color="isOn ? 'yellow' : 'grey-darken-2'">
             {{ isOn ? "mdi-lightbulb-on" : "mdi-lightbulb-off" }}
           </v-icon>
         </v-btn>
       </div>
       <p class="pt-0 mt-0" color="secondary" style="color: #0ae448">
-        Tell us a bit about yourself!
+        Hello {{ username }}! Tell us a bit about yourself!
       </p>
     </v-container>
 
@@ -32,6 +32,7 @@
           class="aurora-vtext"
           v-model="aboutme"
           variant="outlined"
+          color="secondary"
           required
           no-resize
           :placeholder="placeholder"
@@ -50,8 +51,15 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import { ref } from "vue";
+
+const username = useState("username", () => "");
+const aboutme = useState("aboutme", () => "");
 
 const router = useRouter();
+
+// const aboutme = ref(""); // Fix: Declare `aboutme` ref
+const isOn = ref(false);
 
 const Next = () => {
   router.push("/skills");
@@ -60,12 +68,12 @@ const Prev = () => {
   router.push("/");
 };
 const placeholder =
-  "🔭 I’m currently working on \n👯 I’m looking to collaborate on \n🤝 I’m looking for help with \n🌱 I’m currently learning \n💬 Ask me about \n⚡ Fun fact";
+  "🌐 Software Developer | 📚 Lifelong Learner | \n🔭 I’m currently working on \n👯 I’m looking to collaborate on \n🤝 I’m looking for help with \n🌱 I’m currently learning \n💬 Ask me about \n⚡ Fun fact";
 // Light bulb code
-const isOn = ref(false);
 
 const toggleLight = () => {
   isOn.value = !isOn.value;
+  aboutme.value = placeholder; // Insert text inside textarea
 };
 </script>
 
