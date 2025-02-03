@@ -2,6 +2,21 @@
 //   font-family: Mori;
 //   line-height: 18.4px;
 // }
+$primary: #0e100f;
+$secondary: #0ae448;
+$tertiary: #abff84;
+$accent: #c9f6b4;
+$four: #eeeeee;
+$five: #7ef89e;
+
 body {
   font-family: "Poppins", sans-serif;
+}
+.v-text {
+  color: tertiary;
+}
+h1,
+h3,
+p {
+  color: secondary;
 }
