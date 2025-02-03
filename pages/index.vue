@@ -51,12 +51,14 @@ import { useRouter } from "vue-router";
 import { ref } from "vue";
 
 const router = useRouter();
-const username = ref("");
+// const username = ref("");
 const showAlertComponent = ref(false);
 
 const nameRules = [
   (v) => !!v || "Username is required", // ensures username is not empty
 ];
+
+const username = useState("username", () => "");
 
 // Handle form submission
 const getStarted = () => {
