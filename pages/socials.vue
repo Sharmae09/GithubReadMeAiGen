@@ -9,14 +9,15 @@
           <v-row>
             <v-col
               class="d-flex"
-              v-for="(social, index) in socialMedias"
+              v-for="(social, index) in socialUsernames"
               :key="index"
               cols="12"
               sm="6"
             >
               <v-text-field
-                :label="`${social.name} Username`"
-                :placeholder="`Enter your ${social.name} Username`"
+                v-model="socialUsernames[index].username"
+                :label="`${social.media} Username`"
+                :placeholder="`Enter your ${social.media} Username`"
                 variant="underlined"
                 :prepend-outer-icon="social.icon"
                 color="secondary"
@@ -36,8 +37,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { useState } from "#app";
 import { useRouter } from "vue-router";
+
+// Use the router
+const router = useRouter();
 
 const Next = () => {
   router.push("/stats");
@@ -46,23 +50,22 @@ const Next = () => {
 const Prev = () => {
   router.push("/skills");
 };
-// Use the router
-const router = useRouter();
 
-const socialMedias = ref([
-  { name: "Behance", icon: "mdi-behance" },
-  { name: "Medium", icon: "mdi-medium" },
-  { name: "Quora", icon: "mdi-quora" },
-  { name: "Facebook", icon: "mdi-facebook" },
-  { name: "Twitter", icon: "mdi-twitter" },
-  { name: "Instagram", icon: "mdi-instagram" },
-  { name: "LinkedIn", icon: "mdi-linkedin" },
-  { name: "GitHub", icon: "mdi-github" },
-  { name: "YouTube", icon: "mdi-youtube" },
-  { name: "TikTok", icon: "mdi-tiktok" },
-  { name: "Reddit", icon: "mdi-reddit" },
-  { name: "Stackoverflow", icon: "mdi-stackoverflow" },
-  { name: "Twitch", icon: "mdi-twitch" },
-  { name: "Discord", icon: "mdi-discord" },
+// Define social media platforms using useState()
+const socialUsernames = useState("socialUsernames", () => [
+  { media: "Behance", username: "", icon: "mdi-behance" },
+  { media: "Medium", username: "", icon: "mdi-medium" },
+  { media: "Quora", username: "", icon: "mdi-quora" },
+  { media: "Facebook", username: "", icon: "mdi-facebook" },
+  { media: "Twitter", username: "", icon: "mdi-twitter" },
+  { media: "Instagram", username: "", icon: "mdi-instagram" },
+  { media: "LinkedIn", username: "", icon: "mdi-linkedin" },
+  { media: "GitHub", username: "", icon: "mdi-github" },
+  { media: "YouTube", username: "", icon: "mdi-youtube" },
+  { media: "TikTok", username: "", icon: "mdi-tiktok" },
+  { media: "Reddit", username: "", icon: "mdi-reddit" },
+  { media: "Stackoverflow", username: "", icon: "mdi-stackoverflow" },
+  { media: "Twitch", username: "", icon: "mdi-twitch" },
+  { media: "Discord", username: "", icon: "mdi-discord" },
 ]);
 </script>
