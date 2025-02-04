@@ -18,11 +18,11 @@
       </div>
       <v-container>
         <h1 class="aurora-text">Github Profile AI Generator</h1>
-        <v-text>
+        <p>
           Let people know how amazing you are. <br />
           Showcase your skill and project <br />
           Enter your github Username.
-        </v-text>
+        </p>
         <v-text-field
           class="pt-4"
           v-model="username"
@@ -51,7 +51,6 @@ import { useRouter } from "vue-router";
 import { ref } from "vue";
 
 const router = useRouter();
-// const username = ref("");
 const showAlertComponent = ref(false);
 
 const nameRules = [
