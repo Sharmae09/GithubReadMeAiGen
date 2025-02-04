@@ -1,12 +1,18 @@
 <template>
   <v-sheet class="aurora-nav d-flex align-center" width="100vw" height="7vh">
     <!-- <v-container class=""> -->
-    <h3 class="navbar-title text-black">Profile Generator</h3>
+    <h3 class="navbar-title text-black" @click="Home">Profile Generator</h3>
+    <h3 class="navbar-title text-black">{{ username }}</h3>
     <!-- </v-container> -->
   </v-sheet>
 </template>
 
-<script setup></script>
+<script setup>
+const Home = () => {
+  router.push("/");
+};
+const username = useState("username", () => "");
+</script>
 
 <style scoped>
 /* Aurora Navbar */
