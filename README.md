@@ -1,14 +1,36 @@
+# GitHub Profile README Generator  
 
+🚀 **An AI-powered tool to generate stunning GitHub profile READMEs effortlessly.**  
 
-## Setup
+--- 
 
-Make sure to install dependencies:
+## 📌 Live  
+[GitHub Profile README Generator](https://gpm-ai.netlify.app)  
 
-```bash
-# npm
-npm install
+---
 
-```
+## 📌 Features  
+
+✅ **Live Markdown Preview** – Instantly see how your README will look.  
+✅ **Custom Sections** – Add bio, skills, GitHub stats, projects, and social links.  
+✅ **Prebuilt Templates** – Choose from different layouts and themes.  
+✅ **Auto-Generated Markdown** – No need to write manual Markdown code.  
+✅ **Easy Copy & Download** – Copy the generated README or download it as a `.md` file.  
+✅ **Nuxt-Powered** – Fast, responsive, and optimized for performance.  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **Frontend:** Nuxt.js 3, Vue.js, TailwindCSS  
+- **Backend:** (Optional: If API is used, mention it here)  
+- **Markdown Processing:** Showdown.js  
+- **Icons:** Material Design Icons  
+- **Deployment: Netlify  
+
+---
+
+## 💻 Installation & Setup  
 
 ## Development Server
 
