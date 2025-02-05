@@ -320,10 +320,11 @@ const Prev = () => {
   router.push("/about");
 };
 
+
 // Handle chip click logic
-const handleChipClick = (tech) => {
-  console.log(`${tech} clicked`);
-};
+// const handleChipClick = (tech) => {
+//   console.log(`${tech} clicked`);
+// };
 
 const toggleChip = (language) => {
   if (techstack.value.includes(language)) {
