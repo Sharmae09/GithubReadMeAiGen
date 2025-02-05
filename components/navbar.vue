@@ -4,14 +4,17 @@
     <h3 class="navbar-title text-black" @click="Home">Profile Generator</h3>
     <h3 class="navbar-title text-black">{{ username }}</h3>
     <!-- </v-container> -->
+   
   </v-sheet>
 </template>
 
 <script setup>
+import { useState } from "#imports";
 const Home = () => {
   router.push("/");
 };
 const username = useState("username", () => "");
+
 </script>
 
 <style scoped>
